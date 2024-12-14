@@ -1,13 +1,13 @@
 {
   "name": "back",
   "version": "0.1.0",
-  "main": "index.js",
-  "type": "module",
+  "main": "dist/index.js",
+  "type": "commonjs",
   "private": true,
   "scripts": {
-    "start": "node src/index.js",
-    "dev": "nodemon src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node dist/index.js",
+    "dev": "tsc --watch",
+    "build": "tsc"
   },
   "author": "SurisCode",
   "license": "ISC",
@@ -15,11 +15,21 @@
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
-    "express": "^4.21.1"
+    "express": "^4.21.1",
+    "joi": "^17.13.3",
+    "reflect-metadata": "^0.2.2",
+    "sqlite3": "^5.1.7",
+    "typeorm": "^0.3.20"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
-    "@types/node": "^22.9.0"
+    "@types/joi": "^17.2.3",
+    "@types/node": "^22.9.0",
+    "@types/sqlite3": "^3.1.11",
+    "@typescript-eslint/eslint-plugin": "^8.18.0",
+    "@typescript-eslint/parser": "^8.18.0",
+    "eslint": "^9.17.0",
+    "typescript": "^5.7.2"
   }
 }
